@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* body{
+          padding: 0 10%;
+        } */
+        input, button {
+            border: none;
+            outline: none;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            display: inline-block;
+            /* margin-bottom: 3px; */
+            font-weight: normal;
+        }
+
+        h3:hover {
+            text-decoration: underline;
+        }
+
+        input {
+            width: 100%;
+            height: 38px;
+            padding-left: 13px;
+            padding-right: 13px;
+        }
+
+        .main-left,
+        .main-right {
+            display: inline-block;
+        }
+
+        .main-left {
+            width: 20%;
+            float: left;
+            text-align: center;
+        }
+
+        .main-right {
+            width: 50%;
+        }
+        .float-right{
+            float: right;
+        }
+        #logo {
+            width: 45px;
+            height: 45px;
+            margin-top: 20px;
+        }
+
+        #keywords {
+            /* background: #A3D0C3; */
+            border: 2px solid #262F42;
+            border-radius: 50px;
+            background: #F8CF46;
+            color: #262F42;
+            font-size: 1rem;
+            width: 96%;
+            margin: 20px auto;
+        }
+
+        button {
+            height: 30px;
+            width: 30px;
+            outline: none;
+            margin: 10px;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        a {
+            font-size: 1.3rem;
+            color: #1a0dab;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        a:hover {
+            text-decoration: underline;
+
+            /* color: #F8CF46; */
+            /* color: #1f53bf; */
+            /* color: #dfb93d; */
+        }
+
+        .keyword {
+            background-color: #F8CF46;
+            border-radius: 2px;
+        }
+
+        .title {
+            max-width: 86%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 18px;
+            line-height: 1.3;
+            font-family: Microsoft Yahei, arial, sans-serif;
+            vertical-align: middle;
+        }
+
+        .favIcon {
+            border-radius: 50%;
+            border: 1px solid rgba(38, 47, 66, 0.2);
+            padding: 1px;
+            vertical-align: middle;
+        }
+
+        .addTime {
+            display: inline-block;
+            margin-right: 10px;
+            color: rgba(38, 47, 66, 0.8);
+            /* color: #F8CF46; */
+            background-color: rgba(200, 200, 200, 0.3);
+            /* background-color: #fff3c9; */
+            /* background-color: #5b5d5b; */
+            border-radius: 100px;
+            padding: 0 5px;
+        }
+
+        .just-now {
+            background-color: rgb(127, 255, 165);
+            /* background-color: #F8CF46; */
+            color: rgba(38, 47, 66, 0.8);
+        }
+
+        .within-one-hour {
+            /* background-color: #7df9f9; */
+            background-color: #F8CF46;
+            color: rgba(38, 47, 66, 0.8);
+        }
+
+        .today {
+            /* background-color:#7df9f9; */
+            background-color: #F8CF46;
+            color: rgba(38, 47, 66, 0.8);
+        }
+
+        .description {
+            color: #24292e;
+            line-height: 1.58;
+            font-size: 14px;
+            font-family: arial, sans-serif;
+            margin: -10px 20px 0 40px;
+            /* width:200px; */
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .del-bt {
+            display: none;
+            vertical-align: sub;
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            background-image: url(images/delete.png);
+            -moz-background-size: 100% 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        .brief-info:hover .del-bt {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .del-bt:hover {
+            background-image: url(images/delete-hover.png);
+        }
+    </style>
+    <meta name="google-signin-client_id" content="196254172586-u941kusk0pdsq3o1bl1l3l93kr4khaqr.apps.googleusercontent.com">
+</head>
+<body>
+<div class="main-left">
+    <img id="logo" src="images/search500.png"/>
+</div>
+<div class="main-right">
+    <input id="keywords" type="search" placeholder="Search..."/>
+
+    <!-- <button id="search-btn">Search</button> -->
+    <div id="urlList"></div>
+</div>
+<div class="float-right">
+    <div id="my-signin2"></div>
+</div>
+</body>
+<script src="getUrlList.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<script src="login.js"></script>
+</html>
