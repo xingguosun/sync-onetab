@@ -1,0 +1,15 @@
+{
+  "name": "sync-onetab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "deploy": "webstore upload --auto-publish"
+  },
+  "keywords": [],
+  "author": "Xingguo Sun",
+  "license": "ISC",
+  "devDependencies": {
+    "chrome-webstore-upload-cli": "^1.2.1"
+  }
+}

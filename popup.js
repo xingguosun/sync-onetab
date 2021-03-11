@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         addAllButton.addEventListener('click', function(){
             chrome.tabs.query({currentWindow: true}, function(tabs) {
-                createSearchPage();
                 let urlList = [];
                 chrome.storage.local.get("urlList", function callback(result) {
                     urlList = result.urlList;                    
@@ -45,7 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                         chrome.tabs.remove(parseInt(tab.id), function(){});      
                     });
-
+                    
+                createSearchPage();
                     chrome.storage.local.set({urlList: urlList}, function() {
                         createSearchPage();
                         // console.log('Webpage saved');

@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 15.5.0
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: npm run deploy
+  on:
+    branch: main
+
+env:
+  EXTENSION_ID=jmkpenchfaihelgddgdcojnlkhhaeafn
