@@ -36,6 +36,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   listeners[info.menuItemId] (info, tab);
 });
 
+
+ 
+
+
+
 // function getWebPageDetails(id, url, title, favIconUrl){
 //   var info = {tabId: id, tabUrl: url, tabTitle: title, tabFavIconUrl: favIconUrl};
 //   chrome.tabs.executeScript(null, {
@@ -80,6 +85,20 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
       chrome.storage.local.set({urlList: urlList}, function() {
         // console.log('Webpage saved');
         //console.log(urlList);
+      });
+      var db = firebase.firestore();
+      db.collection("tabs").add({
+          url: url,
+          title: title,
+          favicon: favIconUrl,
+          description: description,
+          tiem: addTime
+      })
+      .then((docRef) => {
+          console.log("Document written with ID: ", docRef.id);
+      })
+      .catch((error) => {
+          console.error("Error adding document: ", error);
       });
     });
   }
@@ -127,4 +146,3 @@ function createSearchPage(){
     }
   });
 }
-

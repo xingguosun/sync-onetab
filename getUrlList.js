@@ -5,9 +5,9 @@ var urls;
 var urlsHTML = '';
 
 keywordsEle.addEventListener("input", filter);
-chrome.identity.getProfileUserInfo(function(userInfo) {
-    console.log(userInfo)
-   });
+// chrome.identity.getProfileUserInfo(function(userInfo) {
+//     console.log(userInfo)
+//    });
 chrome.storage.local.get("urlList", function callback(result) {
     urls = result.urlList;
     urls = urls.sort((a, b) => b[4] - a[4]);

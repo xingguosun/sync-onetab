@@ -1,7 +1,7 @@
 {
-  "name": "Sync OneTab",
+  "name": "Calab",
   "version": "1.1",
-  "description": "Like OneTab, but you can synchronize tabs",
+  "description": "",
   "background": {
     "scripts": [
       "background.js"
