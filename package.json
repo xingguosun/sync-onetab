@@ -4,6 +4,7 @@
   "description": "",
   "main": "background.js",
   "scripts": {
+    "test": "echo \"test script...\"",
     "deploy": "webstore upload --auto-publish"
   },
   "keywords": [],
