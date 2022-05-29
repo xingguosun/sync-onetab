@@ -18,13 +18,13 @@ function renderButton() {
 
 document.getElementById("signin").onclick = function () {
   var firebaseConfig = {
-    apiKey: "AIzaSyD9sUdHHJY_BtRso1F2VeXB5J-tCe3Pos8",
+    apiKey: "*",
     authDomain: "calab-2e376.firebaseapp.com",
     databaseURL: "https://calab-2e376.firebaseio.com",
     projectId: "calab-2e376",
     storageBucket: "calab-2e376.appspot.com",
-    messagingSenderId: "618418130810",
-    appId: "1:618418130810:web:8f165e3e8393277656d0c3",
+    messagingSenderId: "",
+    appId: "",
     measurementId: "G-MEASUREMENT_ID",
   };
   
